@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Snowburst One" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css?family=Rubik Bubbles" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Andika" rel="stylesheet">
   <title>Winter Mad Libs</title>
 </head>
 <body>
@@ -11,57 +14,52 @@
     <h1>Winter Mad Libs</h1>
   </header>
   <main>
-    <section class="form">
-      <ul>
-        <li>
+    <form class="form">
           <label for="noun1">Noun</label>
-          <input type="text" id="noun1"/>
-        </li>
-        <li>
+          <input type="text" id="noun1" required/>
+
           <label for="place1">Place</label>
-          <input type="text" id="place1"/>
-        </li>
-        <li>
+          <input type="text" id="place1" required/>
+
           <label for="num1">Number</label>
-          <input type="text" id="num1"/>
-        </li>
-        <li>
+          <input type="text" id="num1" required/>
+
           <label for="noun2">Noun</label>
-          <input type="text" id="noun2"/>
-        </li>
-        <li>
+          <input type="text" id="noun2" required/>
+
           <label for="verb1">Verb(ing)</label>
-          <input type="text" id="verb1"/>
-        </li>
-        <li>
+          <input type="text" id="verb1" required/>
+
           <label for="clothing1">Clothing</label>
-          <input type="text" id="clothing1"/>
-        </li>
-        <li>
+          <input type="text" id="clothing1" required/>
+
           <label for="clothing2">Clothing</label>
-          <input type="text" id="clothing2"/>
-        </li>
-        <li>
+          <input type="text" id="clothing2" required/>
+
           <label for="beverage1">Beverage</label>
-          <input type="text" id="beverage1"/>
-        </li>
-        <li>
+          <input type="text" id="beverage1" required/>
+
           <label for="food1">Food</label>
-          <input type="text" id="food1"/>
-        </li>
-      </ul>
-      <button>Write!</button>
-    </section>
+          <input type="text" id="food1" required/>
+
+          <label for="story-dropdown">Choose a story template!</label>
+          <select id="story-dropdown" required>
+            <option value = "storyA">Story A</option>
+            <option value = "storyB">Story B</option>
+          </select><br>
+
+      <button type = "submit" id = "write-button">Write!</button>
+    </form>
     <section class="story hidden">
-      <p>
-        So much <span id="noun1Text">X</span> fell from the <span id="place1Text">X</span> last night! There are <span id="num1Text">X</span> inches of snow on the ground, so we went outside to build <span
-          id="noun2Text">X</span> men and go <span id="verb1Text">X</span> down
-        a big hill. First, we had to put on warm <span id="clothing1Text">X</span> and <span id="clothing2Text">X</span>.
-        After we were done, we went home to have hot
-        <span id="beverage1Text">X</span> and <span id="food1Text">X</span> to warm up.
+      <p id = 'story-text'>
       </p>
+      <button id = "save-story">Save Story</button>
+    </section>
+    <section class = "saved-stories hidden">
     </section>
   </main>
+  <button id = "write-another" class = "hidden">Write another!</button>
+  <button id = "view-saved">View Saved Stories</button>
   <script src="main.js" type="text/javascript"></script>
 </body>
 </html>

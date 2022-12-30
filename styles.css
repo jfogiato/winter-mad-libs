@@ -1,3 +1,84 @@
 .hidden {
   display: none!important;
 }
+
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.istockphoto.com/photos/empty-panoramic-winter-background-picture-id1181599019?b=1&k=20&m=1181599019&s=612x612&w=0&h=zAVSacPh6se3-RIucNmZWx25ggYCASlUdGelxNku7No=");
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Snowburst One';
+}
+
+.form, .story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.story {
+  font-family: 'Andika';
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  padding: 15px;
+  background: rgba(229, 229, 229, 0.5);
+  border: 5px;
+  border-radius: 10px;
+}
+
+button {
+  font-family: 'Rubik Bubbles';
+  padding: 5px 10px;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #1e88d9;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 6px 6px #999;
+}
+
+button:hover {background-color: #055b9c;}
+
+button:active {
+  box-shadow: 3px 3px #666;
+  transform: translateY(3px);
+}
+
+input, select {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.saved-card {
+  width: 20%;
+  padding: 10px;
+  margin: 5px;
+  background: #b9b7b747;
+}
+
+.saved-stories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: 'Andika';
+}
