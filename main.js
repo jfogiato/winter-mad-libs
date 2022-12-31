@@ -51,7 +51,7 @@ saveStoryButton.addEventListener('click', saveUserStory);
 function viewStory() {
     story.classList.remove('hidden');
     form.classList.add('hidden');
-    viewSavedButton.classList.remove('hidden')
+    viewSavedButton.classList.remove('hidden');
 }
 
 function viewForm() {
@@ -66,13 +66,19 @@ function viewSaved() {
     story.classList.add('hidden');
     form.classList.add('hidden');
     savedView.classList.remove('hidden');
-    viewSavedButton.classList.add('hidden')
+    viewSavedButton.classList.add('hidden');
     writeAnotherButton.classList.remove('hidden');
 }
 
 function submitStory() {
     event.preventDefault();
-    dropDown.value === 'storyA' ? writeStoryA() : writeStoryB();
+    if (dropDown.value === 'storyA') {
+        writeStoryA();
+    } else if (dropDown.value === 'storyB') {
+        writeStoryA();
+    } else {
+        writeStoryC();
+    }
     resetForm();
 }
 
@@ -91,14 +97,21 @@ function resetForm() {
 function writeStoryA() {
     currentStory = `
     So much ${userNoun1.value} fell from the ${userPlace.value} last night! There are ${userNumber.value} inches of snow on the ground, so we went outside to build ${userNoun2.value} men and go ${userVerb.value} down a big hill. First, we had to put on warm ${userClothing1.value} and ${userClothing2.value}. After we were done, we went home to have hot ${userBeverage.value} and ${userFood.value} to warm up.
-    `
+    `;
     pushStory();
 }
 
 function writeStoryB() {
     currentStory = `
-    One time, when I was in ${userPlace.value}, I had just drank a ${userBeverage.value} when I saw a ${userNoun1.value} dressed as a ${userNoun2.value} wearing a ${userClothing2.value}! At first I couldn't believe my eyes, so I started ${userVerb.value} my ${userClothing1.value} out of confusion. After doing that for ${userNumber.value} minutes, I realized that I had accidentally eaten a weed-${userFood.value} and was hallucinating.
-    `
+    One time, when I was in ${userPlace.value}, I had just drank a ${userBeverage.value} when I saw a ${userNoun1.value} dressed as a ${userNoun2.value} wearing a ${userClothing2.value}! At first I couldn't believe my eyes, so I started ${userVerb.value} my ${userClothing1.value} out of confusion. After doing that for ${userNumber.value} minutes, I realized that I had accidentally eaten weed-${userFood.value} and was hallucinating.
+    `;
+    pushStory();
+}
+
+function writeStoryC() {
+    currentStory = `
+    When I was ${userNumber.value} years old, I went to visit my girlfriend in ${userPlace.value}. Her ${userNoun1.value} collection made my ${userClothing1.value} fall off. In the morning, after a cup of ${userBeverage.value}, she took me downtown to see the ${userNoun2.value} parade. I felt proud to be seen in my ${userClothing2.value} despite a ${userFood.value} stain. The memory of that trip will go on ${userVerb.value} in my heart forever.
+    `;
     pushStory();
 }
 
@@ -109,3 +122,5 @@ function pushStory() {
 function saveUserStory() {
    savedView.innerHTML += `<div class = "saved-card">${currentStory}</div>`;
 }
+
+;
