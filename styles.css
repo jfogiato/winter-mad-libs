@@ -6,7 +6,7 @@ html {
   width: 100%;
   height: 100%;
   background-image: url("https://media.istockphoto.com/photos/empty-panoramic-winter-background-picture-id1181599019?b=1&k=20&m=1181599019&s=612x612&w=0&h=zAVSacPh6se3-RIucNmZWx25ggYCASlUdGelxNku7No=");
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 body {
